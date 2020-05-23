@@ -22,8 +22,7 @@ public class MenuController : MonoBehaviour {
         CurrentButtons.Add(new VrButton(blank, "Cancel", 1));
         CurrentButtons.Add(new VrButton(blank, "or Mee!", 2));
         CurrentButtons.Add(new VrButton(blank, "ehey!", 3));
-        //  testButtons[0].Stext = CurrentButtons[0].Stext;
-        //  testButtons[1].Stext = CurrentButtons[1].Stext;
+
         LoadText();
 
     }

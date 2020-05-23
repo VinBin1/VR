@@ -14,7 +14,7 @@ public class ButtonScripttest : MonoBehaviour {
     Color oldColor=Color.white;
 
     void Start() {
-        //thisCB = GetComponent<ColorBlock>();
+        
         thisbutton = this.gameObject.GetComponent<Button>();
         
     }

@@ -25,11 +25,6 @@ public class Networkmanager : MonoBehaviour
         if (!isEditor)
         { Screen.sleepTimeout = SleepTimeout.NeverSleep; }
 
-        //print(XRDevice.isPresent);
-        if (!XRDevice.isPresent)
-        {
-            //  print(XRDevice.isPresent);
-        }
 
 
     }
@@ -60,8 +55,7 @@ public class Networkmanager : MonoBehaviour
             //player2 add
             print("addingplayer");
             PhotonNetwork.Instantiate(playerprfab3, spawnpoint3.position, spawnpoint.rotation, 0);
-          //  PhotonNetwork.Instantiate(playerprfab2, spawnpoint2.position, spawnpoint.rotation, 0);
-          //  PhotonNetwork.Instantiate(playerprfab, spawnpoint.position, spawnpoint.rotation, 0);
+        
 
         }
 

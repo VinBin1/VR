@@ -55,9 +55,7 @@ public class controllerscript : Photon.MonoBehaviour {
     {
         rootObject = transform.root.gameObject;
         THEANIMATOR = rootObject.GetComponent<Animator>();
-        //theHand = FindInChildren(gameObject.transform.root.gameObject, "OVRCameraRig/hand").transform;
-        //theHand = rootObject.transform.Find("LThumb");
-        //theHand = rootObject.transform.Find("OVRCameraRig/hand");
+       
 
         notifytext = (FindInChildren(gameObject.transform.root.gameObject, "notifyplayertext")).transform.gameObject.GetComponent<Text>();
 
@@ -73,7 +71,7 @@ public class controllerscript : Photon.MonoBehaviour {
         panelObject = rootObject.transform.Find("OVRCameraRig/TrackingSpace/CenterEyeAnchor/Canvas/menupanel").gameObject;
         thisPlatformPri = SetPlatformPri();
         thisPlatformSec = SetPlatformSec();
-        //thisPlatformSec = SetPlatformSec();
+     
     }
 
     private PlatformPri SetPlatformPri()
@@ -355,7 +353,7 @@ public class controllerscript : Photon.MonoBehaviour {
             ObjtoDestroy = HitObject;
             THEANIMATOR.SetBool("holdingleft", true);
             StartCoroutine(WaitFor(0.4f));
-            //attachObj(HitObject, theHand.gameObject);
+         
 
             //ui         
             hitpickup.highlight(false);
@@ -371,7 +369,7 @@ public class controllerscript : Photon.MonoBehaviour {
     {
         yield return new WaitForSeconds(secs);
         attachObj(HitObject, theHand.gameObject);
-        //yield return new WaitForSeconds(secs);
+       
 
         
     }
@@ -380,11 +378,10 @@ public class controllerscript : Photon.MonoBehaviour {
     {
         Vector3 objHandRot;
         objHandRot = hitObject.GetComponent<pickup>().objHandRotation;
-        //if (PhotonNetwork.isMasterClient)
-        //{
+       
             playerPV.RPC("pickupObjRPC", PhotonTargets.All, new object[] { targetObj.transform.position, playerPV.viewID, hitObject.GetComponent<PhotonView>().viewID, objHandRot });
             
-       // }
+     
         print("doing..ATTACH");
         #region old
         //Destroy(HitObject);

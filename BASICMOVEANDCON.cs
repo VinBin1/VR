@@ -42,13 +42,6 @@ public class BASICMOVEANDCON : Photon.MonoBehaviour
 
 
 
-    private void Awake()
-    {
-        
-          
-    }
-
-   
 
 
     void Start()
@@ -212,7 +205,6 @@ public class BASICMOVEANDCON : Photon.MonoBehaviour
         notifytext.text = "VR CON.............";
         stick = OVRInput.Get(OVRInput.Axis2D.PrimaryTouchpad);
 
-        //transform.eulerAngles = new Vector3(0, centreye.transform.localEulerAngles.y, 0);
         Vector3 forwardmove = Vector3.forward * Speed * stick.y * Time.deltaTime;
         transform.Translate(forwardmove);//moveplayer
         float yval = stick.y;
