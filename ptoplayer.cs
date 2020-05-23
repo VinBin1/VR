@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class ptoplayer : MonoBehaviour {
      GameObject theTarget;
+    
 
+    
 	// Use this for initialization
 	void Start () {
         theTarget = GameObject.Find("player(Clone)");

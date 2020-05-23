@@ -7,6 +7,7 @@ using Photon;
 using System.Reflection;
 
 
+
 public class controllerscript : Photon.MonoBehaviour {
 
     private Text notifytext;
@@ -190,6 +191,7 @@ public class controllerscript : Photon.MonoBehaviour {
     private void doraycast()
     {
         
+
         RaycastHit hit;
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
 
