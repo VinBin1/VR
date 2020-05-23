@@ -33,7 +33,6 @@ public class Sync : MonoBehaviour, IPunObservable
             transform.position = Vector3.Lerp(transform.position, this.correctPlayerPos, Time.deltaTime * 5);
             transform.rotation = Quaternion.Lerp(transform.rotation, this.correctPlayerRot, Time.deltaTime * 5);
         }
-       // charAnimator.SetBool("iswalking",true);
        
 
     }
@@ -58,8 +57,7 @@ public class Sync : MonoBehaviour, IPunObservable
         {
             this.correctPlayerPos = (Vector3)Stream.ReceiveNext();
             this.correctPlayerRot = (Quaternion)Stream.ReceiveNext();
-            ////this.charAnimator.SetBool("iswalking")=(bool)Stream.ReceiveNext();
-            ///
+
             if (charAnimator != null)
              {
                 this.charAnimator.SetBool("iswalking", (bool)Stream.ReceiveNext());
@@ -90,8 +88,7 @@ public class Sync : MonoBehaviour, IPunObservable
 
         
         GameObject playerGameObject = PhotonView.Find(ID).transform.gameObject;
-         GameObject handgameObject = playerGameObject.transform.Find("engineworker_2ANO/CMU compliant skeleton/Hips/LowerBack/Spine/Spine1/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LThumb/holdPoint").gameObject;
-        //newObject.transform.parent = handgameObject.transform;
+         GameObject handgameObject = playerGameObject.transform.Find("engineworker_2ANO/CMU compliant skeleton/Hips/LowerBack/Spine/Spine1/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LThumb/holdPoint").gameObject; //TODO un HardCode
         objectToPickUp.transform.parent = handgameObject.transform;
         objectToPickUp.transform.localPosition = Vector3.zero;
         objectToPickUp.transform.localRotation =  Quaternion.Euler(objHandRot);
